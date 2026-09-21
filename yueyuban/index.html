@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粤语版-原声影视资源与粤语学习社区</title>
+    <meta name="description" content="本站专注于提供高质量的粤语版影视资源、经典粤语歌曲及专业粤语学习资料。包含港剧推荐、粤语发音教程、常用口语词汇库及在线试听服务。">
+    <meta name="keywords" content="粤语版,粤语电影,粤语电视剧,粤语学习,港剧,粤语歌曲,粤语发音">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #008080; /* Teal - Classic HK TVB feel */
+            --secondary-color: #004d4d;
+            --accent-color: #ff7f50;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            background: var(--primary-color);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            display: flex;
+            gap: 8px;
+        }
+
+        .search-box input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .search-box button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .tag:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 40px auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--text-main);
+            border-left: 5px solid var(--primary-color);
+            padding-left: 12px;
+        }
+
+        .section-more {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Grid System */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            padding-top: 140%; /* Aspect ratio */
+            background: #eee;
+        }
+
+        .card-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--accent-color);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .card-content {
+            padding: 16px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #999;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Feature Section (Learning) */
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            color: var(--primary-color);
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-col h3 {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #bdc3c7;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 16px;
+                gap: 16px;
+            }
+            nav ul {
+                gap: 12px;
+                font-size: 0.9rem;
+            }
+            .hero h1 { font-size: 1.8rem; }
+            .footer-content { grid-template-columns: 1fr; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <a href="#" class="logo"><span>粤语</span>版 · 粤语世界</a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">港剧</a></li>
+                <li><a href="#">粤语电影</a></li>
+                <li><a href="#">粤语歌曲</a></li>
+                <li><a href="#">学习资源</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="搜索粤语版内容...">
+            <button>搜索</button>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>重温经典 · 沉浸原声</h1>
+        <p>汇集全网优质粤语版影视资源，提供标准粤语发音学习资料，带您领略纯正广府文化魅力。</p>
+        <div class="hero-tags">
+            <div class="tag">#TVB经典剧集</div>
+            <div class="tag">#港片怀旧</div>
+            <div class="tag">#粤语发音教程</div>
+            <div class="tag">#粤语流行曲</div>
+        </div>
+    </div>
+</section>
+
+<main class="container">
+
+    <!-- Section: Trending TV Shows -->
+    <section>
+        <div class="section-header">
+            <h2 class="section-title">热门粤语剧集</h2>
+            <a href="#" class="section-more">查看更多 &rarr;</a>
+        </div>
+        <div class="grid-4">
+            <!-- Card 1 -->
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <span class="card-badge">热播</span>
+                    <img src="https://picsum.photos/seed/tvb1/400/560" alt="TVB剧集封面" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">繁花 - 粤语版</h3>
+                    <p class="card-desc">王家卫监制，胡歌领衔主演，重温90年代上海滩的繁华与落寞，原声粤语对白。</p>
+                    <div class="card-meta">
+                        <span>更新至 24集</span>
+                        <a href="#" class="btn-outline" style="font-size:0.8rem; padding: 4px 8px;">播放</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <span class="card-badge">经典</span>
+                    <img src="https://picsum.photos/seed/tvb2/400/560" alt="TVB剧集封面" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">潜行者 - 粤语版</h3>
+                    <p class="card-desc">谍战悬疑大作，严歌苓原著改编，在暗流涌动的时代背景下展开惊心动魄的较量。</p>
+                    <div class="card-meta">
+                        <span>更新至 12集</span>
+                        <a href="#" class="btn-outline" style="font-size:0.8rem; padding: 4px 8px;">播放</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <span class="card-badge">高分</span>
+                    <img src="https://picsum.photos/seed/tvb3/400/560" alt="TVB剧集封面" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">墨雨云间 - 粤语版</h3>
+                    <p class="card-desc">古装复仇爽剧，吴谨言主演，跌宕起伏的剧情配合地道的粤语演绎。</p>
+                    <div class="card-meta">
+                        <span>更新至 36集</span>
+                        <a href="#" class="btn-outline" style="font-size:0.8rem; padding: 4px 8px;">播放</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <span class="card-badge">完结</span>
+                    <img src="https://picsum.photos/seed/tvb4/400/560" alt="TVB剧集封面" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">追风者 - 粤语版</h3>
+                    <p class="card-desc">金融谍战题材，讲述民国时期金融战线的斗争故事，原声粤语原汁原味。</p>
+                    <div class="card-meta">
+                        <span>已完结</span>
+                        <a href="#" class="btn-outline" style="font-size:0.8rem; padding: 4px 8px;">播放</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Section: Learning Resources -->
+    <section style="margin-top: 60px;">
+        <div class="section-header">
+            <h2 class="section-title">粤语发音与学习</h2>
+            <a href="#" class="section-more">学习中心 &rarr;</a>
+        </div>
+        <div class="grid-2">
+            <article class="card" style="padding: 24px; display: flex; align-items: center; gap: 20px;">
+                <img src="https://picsum.photos/seed/audio1/100/100" alt="发音示例" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover;">
+                <div>
+                    <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 8px;">粤语九声六调详解</h3>
+                    <p class="card-desc" style="margin-bottom: 0;">掌握粤语声调是学习的基础，本指南通过图示和音频示范，帮助初学者快速入门。</p>
+                    <a href="#" class="btn" style="margin-top: 12px; font-size: 0.85rem;">开始学习</a>
+                </div>
+            </article>
+            <article class="card" style="padding: 24px; display: flex; align-items: center; gap: 20px;">
+                <img src="https://picsum.photos/seed/audio2/100/100" alt="常用词汇" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover;">
+                <div>
+                    <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 8px;">日常口语高频词汇</h3>
+                    <p class="card-desc" style="margin-bottom: 0;">精选购物、问路、聊天等场景下的实用粤语词汇，附带拼音与中文释义。</p>
+                    <a href="#" class="btn" style="margin-top: 12px; font-size: 0.85rem;">查看列表</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Section: Movie Recommendations -->
+    <section style="margin-top: 60px;">
+        <div class="section-header">
+            <h2 class="section-title">粤语电影推荐</h2>
+            <a href="#" class="section-more">更多电影 &rarr;</a>
+        </div>
+        <div class="grid-4">
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <img src="https://picsum.photos/seed/movie1/300/400" alt="电影海报" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">无间道</h3>
+                    <div class="card-meta">
+                        <span>2002</span>
+                        <a href="#" class="btn-outline" style="font-size:0.8rem; padding: 4px 8px;">观看</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <img src="https://picsum.photos/seed/movie2/300/400" alt="电影海报" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">大话西游</h3>
+                    <div class="card-meta">
+                        <span>1995</span>
+                        <a href="#" class="btn-outline" style="font-size:0.8rem; padding: 4px 8px;">观看</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <img src="https://picsum.photos/seed/movie3/300/400" alt="电影海报" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">食神</h3>
+                    <div class="card-meta">
+                        <span>1996</span>
+                        <a href="#" class="btn-outline" style="font-size:0.8rem; padding: 4px 8px;">观看</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-img-wrapper">
+                    <img src="https://picsum.photos/seed/movie4/300/400" alt="电影海报" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">喜剧之王</h3>
+                    <div class="card-meta">
+                        <span>1999</span>
+                        <a href="#" class="btn-outline" style="font-size:0.8rem; padding: 4px 8px;">观看</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Section: FAQ -->
+    <section style="margin-top: 60px; background: white; padding: 40px; border-radius: 8px;">
+        <div class="section-header">
+            <h2 class="section-title">常见问题</h2>
+        </div>
+        <div style="display: grid; gap: 20px;">
+            <details style="border-bottom: 1px solid #eee; padding-bottom: 10px;">
+                <summary style="cursor: pointer; font-weight: 600;">粤语版电影和普通话版有什么区别？</summary>
+                <p style="margin-top: 10px; color: #666;">粤语版保留了原汁原味的港风文化、独特的幽默感以及演员的口型（对口型），对于想学习粤语或怀念香港电影氛围的观众来说，粤语版更具沉浸感。</p>
+            </details>
+            <details style="border-bottom: 1px solid #eee; padding-bottom: 10px;">
+                <summary style="cursor: pointer; font-weight: 600;">网站上的粤语发音是标准粤语吗？</summary>
+                <p style="margin-top: 10px; color: #666;">我们提供的影视资源采用香港地区通用的标准粤语，发音清晰，适合学习。</p>
+            </details>
+            <details style="border-bottom: 1px solid #eee; padding-bottom: 10px;">
+                <summary style="cursor: pointer; font-weight: 600;">如何提高粤语听力水平？</summary>
+                <p style="margin-top: 10px; color: #666;">建议从简单的粤语流行歌、儿童动画片开始，逐步过渡到复杂的电视剧和电影。多听多看，并结合我们的发音教程进行模仿练习。</p>
+            </details>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h3>粤语版 · 粤语世界</h3>
+            <p style="color: #bdc3c7; font-size: 0.9rem; line-height: 1.8;">
+                致力于推广粤语文化，提供最优质的粤语版影视娱乐内容与学习资源，让更多人领略广府文化的独特魅力。
+            </p>
+        </div>
+        <div class="footer-col">
+            <h3>资源分类</h3>
+            <ul>
+                <li><a href="#">粤语电视剧</a></li>
+                <li><a href="#">粤语电影</a></li>
+                <li><a href="#">粤语综艺</a></li>
+                <li><a href="#">粤语MV</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>学习帮助</h3>
+            <ul>
+                <li><a href="#">粤语声调</a></li>
+                <li><a href="#">常用词汇</a></li>
+                <li><a href="#">语法解析</a></li>
+                <li><a href="#">在线词典</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>联系我们</h3>
+            <ul>
+                <li><a href="#">意见反馈</a></li>
+                <li><a href="#">加入我们</a></li>
+                <li><a href="#">版权声明</a></li>
+                <li><a href="#">隐私政策</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2023 粤语版 · 粤语世界. All Rights Reserved.
+    </div>
+</footer>
+
+</body>
+                  </html>
