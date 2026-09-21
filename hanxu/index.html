@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>韩叙-高品质韩式风格家居与生活方式指南</title>
+    <meta name="description" content="韩叙为您提供专业的韩式家居设计灵感、装修避坑指南及生活方式推荐，打造简约温馨的理想居住空间。">
+    <meta name="keywords" content="韩叙,韩式家居,家居装修,装修指南,室内设计,生活美学">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #5D4037;
+            --secondary-color: #8D6E63;
+            --accent-color: #D7CCC8;
+            --bg-color: #FAFAFA;
+            --text-main: #333333;
+            --text-light: #666666;
+            --white: #FFFFFF;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://picsum.photos/seed/hanseul/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn Up 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 12px 35px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: inline-block;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Features Grid */
+        .features {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: var(--radius);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Design Styles Section */
+        .styles {
+            padding: 80px 0;
+        }
+
+        .style-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .style-card {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            height: 400px;
+            cursor: pointer;
+        }
+
+        .style-card img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s;
+        }
+
+        .style-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .style-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 30px;
+            color: var(--white);
+        }
+
+        .style-overlay h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .style-overlay p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Guide Section */
+        .guide {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .guide-layout {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        .guide-content {
+            flex: 1;
+        }
+
+        .guide-list {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .guide-item {
+            background-color: var(--bg-color);
+            padding: 20px;
+            border-radius: var(--radius);
+        }
+
+        .guide-item h4 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .guide-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .guide-visual {
+            width: 100%;
+            height: 400px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .guide-visual img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            margin-bottom: 15px;
+            background-color: var(--white);
+            border-radius: var(--radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none;
+            position: relative;
+            padding-right: 40px;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            line-height: 1;
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        .faq-content {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            border-top: 1px solid #eee;
+            margin-top: 10px;
+            padding-top: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #3E2723;
+            color: #D7CCC8;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col p {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .style-grid {
+                grid-template-columns: 1fr;
+            }
+            .guide-layout {
+                flex-direction: column;
+            }
+            .guide-list {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .header-actions {
+                width: 100%;
+                justify-content: center;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">韩叙<span>.</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#styles">风格案例</a></li>
+                    <li><a href="#guide">装修指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn-outline">设计咨询</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>探寻韩叙之美，构建理想栖居</h1>
+                <p>从色彩搭配到空间布局，为您提供专业、实用的韩式家居风格灵感与落地方案。</p>
+                <a href="#guide" class="btn-primary">开始探索</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>色彩美学</h3>
+                        <p>解析韩式装修中经典的米白、原木与高级灰搭配法则。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📐</div>
+                        <h3>空间布局</h3>
+                        <p>学习如何通过开放式设计提升空间通透感与利用率。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌿</div>
+                        <h3>软装搭配</h3>
+                        <p>精选绿植、挂画与布艺，打造温馨舒适的居家氛围。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Style Showcase -->
+        <section id="styles" class="styles">
+            <div class="container">
+                <h2 class="section-title">经典韩叙风格</h2>
+                <p class="section-subtitle">不同色调与材质的韩式家居演绎，满足您对温馨与格调的双重追求。</p>
+                <div class="style-grid">
+                    <article class="style-card">
+                        <img src="https://picsum.photos/seed/hanseul1/600/800" alt="温馨原木风客厅">
+                        <div class="style-overlay">
+                            <h3>温馨原木风</h3>
+                            <p>自然材质与柔和光线的完美融合，适合小户型。</p>
+                        </div>
+                    </article>
+                    <article class="style-card">
+                        <img src="https://picsum.photos/seed/hanseul2/600/800" alt="现代简约韩式">
+                        <div class="style-overlay">
+                            <h3>现代简约风</h3>
+                            <p>线条利落，配色清爽，彰显现代生活的精致感。</p>
+                        </div>
+                    </article>
+                    <article class="style-card">
+                        <img src="https://picsum.photos/seed/hanseul3/600/800" alt="复古韩式">
+                        <div class="style-overlay">
+                            <h3>复古怀旧风</h3>
+                            <p>经典暖色调与复古家具，营造岁月静好的居住体验。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="guide">
+            <div class="container">
+                <h2 class="section-title">装修实用指南</h2>
+                <p class="section-subtitle">从预算规划到施工细节，助您轻松实现韩叙风格。</p>
+                <div class="guide-layout">
+                    <div class="guide-content">
+                        <h3>韩叙风格核心要点</h3>
+                        <p style="margin-bottom: 20px; color: var(--text-light);">
+                            韩叙风格（Hanseul Style）源于韩国现代家居美学，强调“少即是多”与“温暖舒适”。其核心在于利用低饱和度的色彩、原木家具以及充足的自然光，营造出一种宁静、整洁且充满生活气息的居住环境。
+                        </p>
+                        <h3>常见误区提醒</h3>
+                        <ul style="list-style: disc; padding-left: 20px; color: var(--text-light);">
+                            <li style="margin-bottom: 8px;">避免过度使用亮色，保持整体色调的统一和谐。</li>
+                            <li style="margin-bottom: 8px;">灯光设计不要只靠主灯，多利用辅助光源增加层次。</li>
+                            <li style="margin-bottom: 8px;">软装搭配切忌堆砌，每件物品都应有其实用与审美价值。</li>
+                        </ul>
+                    </div>
+                    <div class="guide-list">
+                        <div class="guide-item">
+                            <h4>墙面处理</h4>
+                            <p>推荐使用乳胶漆或墙纸，大面积留白，局部点缀装饰画。</p>
+                        </div>
+                        <div class="guide-item">
+                            <h4>地面选材</h4>
+                            <p>浅色实木地板或柔光砖是首选，耐脏且易于打理。</p>
+                        </div>
+                        <div class="guide-item">
+                            <h4>灯光布局</h4>
+                            <p>无主灯设计或防眩射灯，配合灯带，营造温馨氛围。</p>
+                        </div>
+                        <div class="guide-item">
+                            <h4>收纳系统</h4>
+                            <p>定制嵌入式柜体，保持视觉整洁，提升空间利用率。</p>
+                        </div>
+                    </div>
+                    <div class="guide-visual">
+                        <img src="https://picsum.photos/seed/hanseul4/800/600" alt="韩式家居细节展示">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container faq-container">
+                <h2 class="section-title">常见问题解答</h2>
+                <details>
+                    <summary>韩叙风格适合什么样的户型？</summary>
+                    <div class="faq-content">
+                        韩叙风格非常百搭，尤其适合中小户型。其简洁的线条和浅色调能有效增加视觉空间感，避免拥挤。但对于大户型，通过合理的布局也能营造出高级感。
+                    </div>
+                </details>
+                <details>
+                    <summary>预算有限如何实现韩叙风格？</summary>
+                    <div class="faq-content">
+                        可以通过软装改造来实现。保留原有硬装结构，更换墙面颜色，购买简约的北欧/韩式家具，以及更换窗帘和灯具，成本相对较低但效果明显。
+                    </div>
+                </details>
+                <details>
+                    <summary>韩叙风格装修周期通常需要多久？</summary>
+                    <div class="faq-content">
+                        取决于施工难度和房屋面积。一般来说，硬装施工需要1-2个月，软装搭配和入住需要1个月左右。如果包含定制家具，周期会相应延长。
+                    </div>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="color: #D7CCC8; margin-bottom: 15px;">韩叙<span>.</span></div>
+                    <p>专注于分享韩式家居设计理念与生活方式，致力于帮助每一位热爱生活的人打造理想的居住空间。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">风格案例</a></li>
+                        <li><a href="#">装修百科</a></li>
+                        <li><a href="#">联系合作</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>风格分类</h4>
+                    <ul>
+                        <li><a href="#">北欧风</a></li>
+                        <li><a href="#">日式风</a></li>
+                        <li><a href="#">现代简约</a></li>
+                        <li><a href="#">复古风</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">小红书</a></li>
+                        <li><a href="#">微博</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 韩叙家居设计指南 版权所有.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
